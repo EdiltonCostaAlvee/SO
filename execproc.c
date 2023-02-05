@@ -32,7 +32,7 @@ int main(void)
     int timeMileSegundos = 3000;
     int qtdMaximaProcesso = 0;
 
-    printf("\nInforme a quantidade máxima de processos, lembrando que a quantidade máxima vai até 10 processos: ");
+    printf("\nInforme a quantidade de processos. ATENÇÃO a quantidade máxima  permitida é 10 processos: "); 
     scanf("%d", &qtdMaximaProcesso);
     if (qtdMaximaProcesso == 0 || qtdMaximaProcesso > 10)
     {
