@@ -26,77 +26,512 @@ int main(void)
 {
 
     struct Processo *listaProcesso, *processoTemporario;
-    int numProcesso = 1;
+    int contador = 1;
+    int numProcesso = 0;
     int numPrioridadeProcesso = 5;
     int timeMileSegundos = 3000;
+    int qtdMaximaProcesso = 0;
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+    printf("\nInforme a quantidade máxima de processos, lembrando que a quantidade máxima vai até 10 processos: ");
+    scanf("%d", &qtdMaximaProcesso);
+    if (qtdMaximaProcesso == 0 || qtdMaximaProcesso > 10)
+    {
+        printf("\nA quantidade máxima deve ser entre 1 e 10, tente novamente: ");
+        exit(1);
+    }
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
-    processoTemporario = listaProcesso->proximo;
+    if (qtdMaximaProcesso == 1)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+    }
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
-    processoTemporario = processoTemporario->proximo;
+    if (qtdMaximaProcesso == 2)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
-    processoTemporario = processoTemporario->proximo;
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        // processoTemporario = listaProcesso->proximo;
+    }
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
-    processoTemporario = processoTemporario->proximo;
+    if (qtdMaximaProcesso == 3)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
-    processoTemporario = processoTemporario->proximo;
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = listaProcesso->proximo;
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
-    processoTemporario = processoTemporario->proximo;
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        // processoTemporario = processoTemporario->proximo;
+    }
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
-    processoTemporario = processoTemporario->proximo;
+    if (qtdMaximaProcesso == 4)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
-    processoTemporario = processoTemporario->proximo;
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = listaProcesso->proximo;
 
-    printf("\nInforme o número do processo: ");
-    scanf("%d", &numProcesso);
-    printf("\nInforme a prioridade do processo %d:", numProcesso);
-    scanf("%d", &numPrioridadeProcesso);
-    processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        // processoTemporario = processoTemporario->proximo;
+    }
+
+    if (qtdMaximaProcesso == 5)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = listaProcesso->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        // processoTemporario = processoTemporario->proximo;
+    }
+
+    if (qtdMaximaProcesso == 6)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = listaProcesso->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        // processoTemporario = processoTemporario->proximo;
+    }
+
+    if (qtdMaximaProcesso == 7)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = listaProcesso->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        // processoTemporario = processoTemporario->proximo;
+    }
+
+    if (qtdMaximaProcesso == 8)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = listaProcesso->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        // processoTemporario = processoTemporario->proximo;
+    }
+
+    if (qtdMaximaProcesso == 9)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = listaProcesso->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        // processoTemporario = processoTemporario->proximo;
+    }
+
+    if (qtdMaximaProcesso == 10)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = listaProcesso->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        // processoTemporario = processoTemporario->proximo;
+    }
+
+    /*while (contador <= qtdMaximaProcesso)
+    {
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        if (contador == 1)
+        {
+            listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        }
+        else
+        {
+            listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        }
+
+        contador++;
+    }*/
+
+    /*
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        listaProcesso->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = listaProcesso->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        processoTemporario = processoTemporario->proximo;
+
+        printf("\nInforme o número do processo: ");
+        scanf("%d", &numProcesso);
+        printf("\nInforme a prioridade do processo %d:", numProcesso);
+        scanf("%d", &numPrioridadeProcesso);
+        processoTemporario->proximo = iniciarProcesso(numProcesso, timeMileSegundos, numPrioridadeProcesso);
+        */
 
     /*
     listaProcesso = iniciarProcesso(1, 3000, 2);
@@ -124,7 +559,7 @@ int main(void)
     primeiroProcessoChega(listaProcesso);
     processoFinal(listaProcesso);
     prioridade(listaProcesso);
-    roundRobin(listaProcesso, 10);
+    roundRobin(listaProcesso, qtdMaximaProcesso);
 
     while (listaProcesso != NULL)
     {
