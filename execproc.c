@@ -28,7 +28,7 @@ int main(void)
     struct Processo *listaProcesso, *processoTemporario;
     int contador = 1;
     int numProcesso = 0;
-    int numPrioridadeProcesso = 5;
+    int numPrioridadeProcesso = 3;
     int timeMileSegundos = 3000;
     int qtdMaximaProcesso = 0;
 
