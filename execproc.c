@@ -28,11 +28,11 @@ int main(void)
     struct Processo *listaProcesso, *processoTemporario;
     int contador = 1;
     int numProcesso = 0;
-    int numPrioridadeProcesso = 3;
+    int numPrioridadeProcesso = 5;
     int timeMileSegundos = 3000;
     int qtdMaximaProcesso = 0;
 
-    printf("\nInforme a quantidade de processos. ATENÇÃO a quantidade máxima  permitida é 10 processos: "); 
+    printf("\nInforme a quantidade máxima de processos, lembrando que a quantidade máxima vai até 10 processos: ");
     scanf("%d", &qtdMaximaProcesso);
     if (qtdMaximaProcesso == 0 || qtdMaximaProcesso > 10)
     {
@@ -597,7 +597,7 @@ void listaProcessos(struct Processo *processo)
     printf("\n");
     while (temporario != NULL)
     {
-        printf("Processo: %d\tPrioridade: %d\tTempo em mile segundos: %d\n", temporario->id, temporario->prioridade, temporario->tempoDuracaoProcesso);
+        printf("Processo: %d\tPrioridade: %d\tTempo em milissegundos: %d\n", temporario->id, temporario->prioridade, temporario->tempoDuracaoProcesso);
         temporario = temporario->proximo;
     };
     printf("\n");
@@ -658,7 +658,7 @@ void prioridade(struct Processo *processo)
             inicio = tempo;
             tempo += copia->tempoDuracaoProcesso;
             fim = tempo;
-            printf("Processo: %d\tTempo em mile segundos: %d\tInício: %d\tFim: %d\n", copia->id, tempo, inicio, fim);
+            printf("Processo: %d\tTempo em milissegundos: %d\tInício: %d\tFim: %d\n", copia->id, tempo, inicio, fim);
             processoTemporario = copia->proximo;
             free(copia);
             copia = processoTemporario;
@@ -670,7 +670,7 @@ void prioridade(struct Processo *processo)
             inicio = tempo;
             tempo += temporario->tempoDuracaoProcesso;
             fim = tempo;
-            printf("Processo: %d\tTempo em mile segundos: %d\tInício: %d\tFim: %d\n", temporario->id, tempo, inicio, fim);
+            printf("Processo: %d\tTempo em milissegundos: %d\tInício: %d\tFim: %d\n", temporario->id, tempo, inicio, fim);
             maiorPrimeiro->proximo = temporario->proximo;
             free(temporario);
         };
@@ -702,7 +702,7 @@ void primeiroProcessoChega(struct Processo *processo)
         inicio = tempo;
         tempo += temporario->tempoDuracaoProcesso;
         fim = tempo;
-        printf("Processo: %d\tTempo em mile segundos: %d\tInício: %d\tFim: %d\n", temporario->id, tempo, inicio, fim);
+        printf("Processo: %d\tTempo em milissegundos: %d\tInício: %d\tFim: %d\n", temporario->id, tempo, inicio, fim);
         temporario = temporario->proximo;
     };
     printf("\n");
@@ -787,7 +787,7 @@ void roundRobin(struct Processo *processo, int quantum)
     temporario = copia;
     while (temporario != NULL)
     {
-        printf("Processo: %d\tTempo em mile segundos: %d\tInício: %d\tFim: %d\n", temporario->id, temporario->tempoDuracaoProcesso, temporario->tempoEspera, temporario->tempoExecucao + temporario->tempoEspera);
+        printf("Processo: %d\tTempo em milissegundos: %d\tInício: %d\tFim: %d\n", temporario->id, temporario->tempoDuracaoProcesso, temporario->tempoEspera, temporario->tempoExecucao + temporario->tempoEspera);
         copiaTemporaria = temporario;
         temporario = temporario->proximo;
         free(copiaTemporaria);
@@ -849,7 +849,7 @@ void processoFinal(struct Processo *processo)
             inicio = tempo;
             tempo += copia->tempoDuracaoProcesso;
             fim = tempo;
-            printf("Processo: %d\tTempo em mile segundos: %d\tInício: %d\tFim: %d\n", copia->id, tempo, inicio, fim);
+            printf("Processo: %d\tTempo em milissegundos: %d\tInício: %d\tFim: %d\n", copia->id, tempo, inicio, fim);
             copiaTemporaria = copia;
             copia = copia->proximo;
             free(copiaTemporaria);
@@ -861,7 +861,7 @@ void processoFinal(struct Processo *processo)
             inicio = tempo;
             tempo += processoTemporario->tempoDuracaoProcesso;
             fim = tempo;
-            printf("Processo: %d\tTempo em mile segundos: %d\tInício: %d\tFim: %d\n", processoTemporario->id, tempo, inicio, fim);
+            printf("Processo: %d\tTempo em milissegundos: %d\tInício: %d\tFim: %d\n", processoTemporario->id, tempo, inicio, fim);
             temporario->proximo = processoTemporario->proximo;
             free(processoTemporario);
         }
